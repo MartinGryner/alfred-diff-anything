@@ -1,0 +1,1 @@
+Two versions of a bakery's folder. In Diff Anything: `menu.txt` changed (a price, and a roll replaced), `hours.json` changed (closing time and Sunday; the reordered keys are no change), and `old-notes.txt` is only in the left folder.

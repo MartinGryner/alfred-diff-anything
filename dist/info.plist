@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.martingruner.alfred.diffanything</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>D1FFA000-0000-4000-8000-000000000001</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1FFA000-0000-4000-8000-000000000002</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D1FFA000-0000-4000-8000-000000000002</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1FFA000-0000-4000-8000-000000000009</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D1FFA000-0000-4000-8000-000000000003</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1FFA000-0000-4000-8000-000000000004</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D1FFA000-0000-4000-8000-000000000004</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1FFA000-0000-4000-8000-000000000009</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D1FFA000-0000-4000-8000-000000000005</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1FFA000-0000-4000-8000-000000000006</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D1FFA000-0000-4000-8000-000000000006</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1FFA000-0000-4000-8000-000000000007</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D1FFA000-0000-4000-8000-000000000007</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1FFA000-0000-4000-8000-000000000009</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Martin Grüner</string>
+	<key>description</key>
+	<string>Compare two files, two folders, or two copied texts in the Diff Anything app</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Diff Anything</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<true/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Compare in Diff Anything</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000001</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/bin/zsh --no-rcs ./diffanything.sh files "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000002</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:files_keyword}</string>
+				<key>subtext</key>
+				<string>Opens two files or two folders side by side in Diff Anything</string>
+				<key>text</key>
+				<string>Compare the two items selected in Finder</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000003</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/bin/zsh --no-rcs ./diffanything.sh finder</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000004</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:clipboard_keyword}</string>
+				<key>subtext</key>
+				<string>Earlier copy on the left, latest on the right, in Diff Anything</string>
+				<key>text</key>
+				<string>Compare the last two copied texts</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000005</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>newer_text</key>
+					<string>{clipboard}</string>
+					<key>older_text</key>
+					<string>{clipboard:1}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000006</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/bin/zsh --no-rcs ./diffanything.sh text</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000007</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Diff Anything</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D1FFA000-0000-4000-8000-000000000009</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Diff Anything for Alfred
+
+Open two files, two folders, or two copied texts side by side in the Diff Anything app on your Mac.
+
+## Requirements
+
+- macOS 13 or later and Alfred 5 with the paid [Powerpack](https://www.alfredapp.com/powerpack/), which Alfred needs to run workflows.
+- Diff Anything 1.7.0 or later from the Mac App Store. If the app is missing or older, the workflow says so and opens the Mac App Store.
+- For **Compare the last two copied texts**: Clipboard History turned on in Alfred's Features.
+
+## Install
+
+1. Install [Diff Anything from the Mac App Store](https://apps.apple.com/app/id6795463996) and open it once.
+2. Download **Diff Anything.alfredworkflow** from the [latest release](https://github.com/MartinGryner/alfred-diff-anything/releases/latest).
+3. Open the downloaded workflow to import it into Alfred. The workflow is free and its source is available here under the MIT License.
+
+## Commands
+
+**Compare in Diff Anything** (file action). Find the first file or folder in Alfred and add it to the File Buffer with ⌥↑, do the same with the second, then press ⌥→ to act on both and choose **Compare in Diff Anything**. The first item opens on the left, the second on the right.
+
+**diff** (keyword). Select two files or two folders in Finder, then type `diff` in Alfred. If the sides come out the wrong way round, swap them with the swap button beside **Open Right** in Diff Anything.
+
+**diffclip** (keyword). Copy one text, then another, then type `diffclip` in Alfred. The earlier copy opens on the left, the latest on the right.
+
+Each comparison opens in a new Diff Anything tab, with the features and limits of your Diff Anything plan. Purchase or restore Pro in the app. Both keywords can be changed in the workflow's configuration.
+
+For a quick example, copy `Bread 3.50`, then `Bread 3.80`, and run `diffclip`. The earlier price is on the left and the latest on the right. The `examples/` folder also has two small bakery folders: a price changes, opening hours change, and one note is removed.
+
+## Free and Pro
+
+The workflow itself is free. Diff Anything Free allows 10 new comparison sessions per local day with files up to 5 MiB per side. Folder and archive comparisons preview the first 100 items; CSV previews show 100 rows, binary previews show 100 byte differences and PDF previews show 3 pages. A one-time Pro purchase in Diff Anything removes these preview and session limits within technical safety limits, and adds merging, folder copying and synchronization, profiles, history, and report export.
+
+## Privacy
+
+The workflow makes no network requests and sends nothing to an AI model. It hands your files to Diff Anything through macOS and never changes them. It reads the Finder selection only when you use `diff`, and the last two Clipboard History items only when you use `diffclip`.
+
+`diffclip` saves the two texts as private files (folder mode 0700, file mode 0600) in the workflow's cache folder so Diff Anything can open them. A later text comparison removes pairs older than a day. Deletion is not secure erasure.
+
+## Source
+
+`workflow/diffanything.sh` does the work; `build.py` writes Alfred's `info.plist` and packages `dist/Diff Anything.alfredworkflow`; `tests/test.sh` runs the script against a stand-in app. `examples/` holds a small folder pair to try.
+
+MIT License.
+
+## Development disclosure
+
+This workflow was created with Claude Code and reviewed with OpenAI Codex. Comparisons run locally in Diff Anything and send no data to an AI model.
+</string>
+	<key>uidata</key>
+	<dict>
+		<key>D1FFA000-0000-4000-8000-000000000001</key>
+		<dict>
+			<key>xpos</key>
+			<real>30.0</real>
+			<key>ypos</key>
+			<real>30.0</real>
+		</dict>
+		<key>D1FFA000-0000-4000-8000-000000000002</key>
+		<dict>
+			<key>xpos</key>
+			<real>230.0</real>
+			<key>ypos</key>
+			<real>30.0</real>
+		</dict>
+		<key>D1FFA000-0000-4000-8000-000000000003</key>
+		<dict>
+			<key>xpos</key>
+			<real>30.0</real>
+			<key>ypos</key>
+			<real>170.0</real>
+		</dict>
+		<key>D1FFA000-0000-4000-8000-000000000004</key>
+		<dict>
+			<key>xpos</key>
+			<real>230.0</real>
+			<key>ypos</key>
+			<real>170.0</real>
+		</dict>
+		<key>D1FFA000-0000-4000-8000-000000000005</key>
+		<dict>
+			<key>xpos</key>
+			<real>30.0</real>
+			<key>ypos</key>
+			<real>310.0</real>
+		</dict>
+		<key>D1FFA000-0000-4000-8000-000000000006</key>
+		<dict>
+			<key>xpos</key>
+			<real>200.0</real>
+			<key>ypos</key>
+			<real>340.0</real>
+		</dict>
+		<key>D1FFA000-0000-4000-8000-000000000007</key>
+		<dict>
+			<key>xpos</key>
+			<real>290.0</real>
+			<key>ypos</key>
+			<real>310.0</real>
+		</dict>
+		<key>D1FFA000-0000-4000-8000-000000000009</key>
+		<dict>
+			<key>xpos</key>
+			<real>480.0</real>
+			<key>ypos</key>
+			<real>170.0</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>diff</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Finder selection keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>files_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>diffclip</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Copied texts keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>clipboard_keyword</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://martingruner.com/projects/diffanything</string>
+</dict>
+</plist>
